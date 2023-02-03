@@ -1,2 +1,2 @@
 # codewars_challenges
-My codewars solutions (www.codewars.com)
+Codewars solutions (www.codewars.com)
