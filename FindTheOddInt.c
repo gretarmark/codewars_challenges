@@ -12,6 +12,7 @@ Examples
 [1,2,2,3,3,3,4,3,3,3,2,2,1] should return 4, because it appears 1 time (which is odd).
 */
 
+//Solution 1
 #include <stddef.h>
 
 int find_odd (size_t length, const int array[length])
@@ -24,6 +25,28 @@ int find_odd (size_t length, const int array[length])
   }
   
     return var;
+}
+
+
+//Solution 2
+#include <stddef.h>
+
+int find_odd (size_t length, const int array[length])
+{
+  int n;
+  unsigned long i, j;
+  for(i = 0; i < length; i++)
+  {
+    n = 0;
+    for(j = 0; j < length; j++)
+    {
+      if(array[i] == array[j])
+        n++;
+    }
+    if(n % 2 == 1)
+      return array[i];
+  }
+  return 0;
 }
 
 
